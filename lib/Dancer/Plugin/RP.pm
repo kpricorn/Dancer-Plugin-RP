@@ -5,6 +5,11 @@ use Dancer::Plugin;
 our $AUTHORITY = 'sdecaste';
 our $VERSION = '0.01';
 
+register base_uri =>
+sub {
+    "private"
+};
+
 register uri_for_private =>
 sub {
     "private"
