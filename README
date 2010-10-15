@@ -1,0 +1,66 @@
+NAME
+    Dancer::Plugin::RP - The great new Dancer::Plugin::RP!
+
+VERSION
+    Version 0.01
+
+SYNOPSIS
+    Quick summary of what the module does.
+
+    Perhaps a little code snippet.
+
+        use Dancer::Plugin::RP;
+
+        my $foo = Dancer::Plugin::RP->new();
+        ...
+
+EXPORT
+    A list of functions that can be exported. You can delete this section if
+    you don't export anything, such as for a purely object-oriented module.
+
+SUBROUTINES/METHODS
+  function1
+  function2
+AUTHOR
+    Sebastian de Castelberg, "<sdecaste at cpan.org>"
+
+BUGS
+    Please report any bugs or feature requests to "bug-dancer-plugin-rp at
+    rt.cpan.org", or through the web interface at
+    <http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Dancer-Plugin-RP>. I
+    will be notified, and then you'll automatically be notified of progress
+    on your bug as I make changes.
+
+SUPPORT
+    You can find documentation for this module with the perldoc command.
+
+        perldoc Dancer::Plugin::RP
+
+    You can also look for information at:
+
+    *   RT: CPAN's request tracker
+
+        <http://rt.cpan.org/NoAuth/Bugs.html?Dist=Dancer-Plugin-RP>
+
+    *   AnnoCPAN: Annotated CPAN documentation
+
+        <http://annocpan.org/dist/Dancer-Plugin-RP>
+
+    *   CPAN Ratings
+
+        <http://cpanratings.perl.org/d/Dancer-Plugin-RP>
+
+    *   Search CPAN
+
+        <http://search.cpan.org/dist/Dancer-Plugin-RP/>
+
+ACKNOWLEDGEMENTS
+LICENSE AND COPYRIGHT
+    Copyright 2010 Sebastian de Castelberg.
+
+    This program is free software; you can redistribute it and/or modify it
+    under the terms of either: the GNU General Public License as published
+    by the Free Software Foundation; or the Artistic License.
+
+    See http://dev.perl.org/licenses/ for more information.
+
