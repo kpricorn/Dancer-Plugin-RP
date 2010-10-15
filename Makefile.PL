@@ -1,11 +1,11 @@
 use inc::Module::Install;
 name 'Dancer-Plugin-RP';
-all_from 'lib/Dancer/Plugin/PR.pm';
-readme_from 'lib/Dancer/Plugin/PR.pm';
-readme_markdown_from 'lib/Dancer/Plugin/PR.pm';
+all_from 'lib/Dancer/Plugin/RP.pm';
+readme_from 'lib/Dancer/Plugin/RP.pm';
+readme_markdown_from 'lib/Dancer/Plugin/RP.pm';
 
 requires(
-    'Dancer'    => '1.178_01',
+    'Dancer'    => 0,
 );
 
 test_requires(
