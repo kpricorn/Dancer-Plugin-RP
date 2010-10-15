@@ -1,110 +1,62 @@
 package Dancer::Plugin::RP;
+use Dancer ':syntax';
+use Dancer::Plugin;
 
-use warnings;
-use strict;
+our $AUTHORITY = 'sdecaste';
+our $VERSION = '0.01';
+
+register uri_for_private =>
+sub {
+    "private"
+};
+
+register uri_for_public =>
+sub {
+    "public"
+};
+
+register_plugin;
+
+1;
+__END__
+=pod
 
 =head1 NAME
 
-Dancer::Plugin::RP - The great new Dancer::Plugin::RP!
+Dancer::Plugin::RP - Reverse Proxy Helpers
 
-=head1 VERSION
+=head1 SYNOPSYS
 
-Version 0.01
+    package MyApp;
 
-=cut
-
-our $VERSION = '0.01';
-
-
-=head1 SYNOPSIS
-
-Quick summary of what the module does.
-
-Perhaps a little code snippet.
-
+    use Dancer;
     use Dancer::Plugin::RP;
 
-    my $foo = Dancer::Plugin::RP->new();
-    ...
+    get '/' => sub {
+        redirect uri_for('/path');
+        # can be something like: http://public/path
+    };
 
-=head1 EXPORT
+=head1 DESCRIPTION
 
-A list of functions that can be exported.  You can delete this section
-if you don't export anything, such as for a purely object-oriented module.
+This plugin helps you write a RESTful webservice with Dancer.
 
-=head1 SUBROUTINES/METHODS
+=head1 KEYWORDS
 
-=head2 function1
+=head2 uri_for_private
 
-=cut
+=head2 uri_for_public
 
-sub function1 {
-}
+=head1 LICENCE
 
-=head2 function2
+This module is released under the same terms as Perl itself.
 
-=cut
+=head1 AUTHORS
 
-sub function2 {
-}
+This module has been written by Sebastian de Castelberg <sdecaste@cpan.org>.
 
-=head1 AUTHOR
+=head1 SEE ALSO
 
-Sebastian de Castelberg, C<< <sdecaste at cpan.org> >>
-
-=head1 BUGS
-
-Please report any bugs or feature requests to C<bug-dancer-plugin-rp at rt.cpan.org>, or through
-the web interface at L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Dancer-Plugin-RP>.  I will be notified, and then you'll
-automatically be notified of progress on your bug as I make changes.
-
-
-
-
-=head1 SUPPORT
-
-You can find documentation for this module with the perldoc command.
-
-    perldoc Dancer::Plugin::RP
-
-
-You can also look for information at:
-
-=over 4
-
-=item * RT: CPAN's request tracker
-
-L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=Dancer-Plugin-RP>
-
-=item * AnnoCPAN: Annotated CPAN documentation
-
-L<http://annocpan.org/dist/Dancer-Plugin-RP>
-
-=item * CPAN Ratings
-
-L<http://cpanratings.perl.org/d/Dancer-Plugin-RP>
-
-=item * Search CPAN
-
-L<http://search.cpan.org/dist/Dancer-Plugin-RP/>
-
-=back
-
-
-=head1 ACKNOWLEDGEMENTS
-
-
-=head1 LICENSE AND COPYRIGHT
-
-Copyright 2010 Sebastian de Castelberg.
-
-This program is free software; you can redistribute it and/or modify it
-under the terms of either: the GNU General Public License as published
-by the Free Software Foundation; or the Artistic License.
-
-See http://dev.perl.org/licenses/ for more information.
-
+L<Dancer> L<Plack::Middleware::ReverseProxy>
 
 =cut
-
-1; # End of Dancer::Plugin::RP
